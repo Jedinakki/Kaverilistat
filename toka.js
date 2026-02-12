@@ -1,4 +1,4 @@
-const kavereita = []
+let kavereita = []
 const lisaNappi = document.getElementById("lisaNappi")
 const poisNappi = document.getElementById("poisNappi")
 const jarNappi = document.getElementById("jarNappi")
@@ -13,7 +13,9 @@ function lisaaNimi() {
     lisaaKaverit()
 }
 function poistaNimi(){
-    kavereita.pop(nimi)
+    kavereita = kavereita.filter(function(item) {
+    return item !== nimi
+    })
     lisaaKaverit()
 }
 function jarjestaNimet(){
